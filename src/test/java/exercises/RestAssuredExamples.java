@@ -22,6 +22,7 @@ import static org.hamcrest.Matchers.lessThan;
 import static org.hamcrest.core.Is.is;
 
 
+
 public class RestAssuredExamples {
 
     private static String myAuthenticationToken;
@@ -43,6 +44,15 @@ public class RestAssuredExamples {
                 path("");
     }
     */
+
+    /*
+    Main Points:
+    1. Basic Test for common API
+    2. API Test with Authentication handle
+    3. Junit Multi Parameters Testing
+    4. API Test With Object Serilization automaticly
+    5. Assertion with hamcrest framework
+     */
 
     @Test
     public void usePreviouslyStoredAuthToken() {
@@ -184,7 +194,7 @@ public class RestAssuredExamples {
                 then().
                 spec(responseSpec).
                 and().
-                body("country", equalTo("United States"));
+                body("country", is("United States"));
     }
 
     private static RequestSpecification requestSpec;

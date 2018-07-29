@@ -12,22 +12,24 @@ public class RestAssuredExercises6Test {
 
 	private static RequestSpecification requestSpec;
 
+
 	@BeforeAll
-	public static void createRequestSpecification() {
+	static void setUp() {
 
 		requestSpec = new RequestSpecBuilder().
-			setBaseUri("http://localhost").
-			setPort(9876).
-			setContentType(ContentType.JSON).
-			build();
+				setBaseUri("http://localhost").
+				setPort(9876).
+				setContentType(ContentType.JSON).
+				build();
 	}
-		
+
+
 	/*******************************************************
 	 * Create a new Car object that represents a 2012 Ford Focus
 	 * POST this object to /cars/postcar
 	 * Verify that the response HTTP status code is equal to 200
 	 ******************************************************/
-	
+
 	@Test
 	public void checkThatPostingA2012FordFocusReturnsHttp200() {
 

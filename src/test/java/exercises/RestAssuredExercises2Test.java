@@ -23,17 +23,22 @@ public class RestAssuredExercises2Test {
 	}
 	
 	/*******************************************************
-	 * Create a DataProvider that specifies in which country
+	 * Use junit-jupiter-params for @ParameterizedTest that
+	 * specifies in which country
 	 * a specific circuit can be found (specify that Monza 
 	 * is in Italy, for example) 
 	 ******************************************************/
 
+	//todo
+
 	/*******************************************************
-	 * Create a DataProvider that specifies for all races
+	 * Use junit-jupiter-params for @ParameterizedTest that specifies for all races
 	 * (adding the first four suffices) in 2015 how many  
 	 * pit stops Max Verstappen made
 	 * (race 1 = 1 pitstop, 2 = 3, 3 = 2, 4 = 2)
 	 ******************************************************/
+
+	//todo
 
 	/*******************************************************
 	 * Request data for a specific circuit (for Monza this 
