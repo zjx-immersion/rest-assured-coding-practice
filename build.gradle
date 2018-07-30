@@ -52,3 +52,30 @@ dependencies {
     testCompile 'org.mockito:mockito-core:2.19.0'
     testCompile 'com.fasterxml.jackson.core:jackson-databind:2.9.4'
 }
+
+if (project.plugins.findPlugin('jacoco')) {
+    jacoco {
+        toolVersion = '0.8.1'
+    }
+}
+
+test {
+
+    filter {
+        includeTestsMatching '*Test'
+    }
+
+    useJUnitPlatform {
+        excludeTags 'demo'
+
+    }
+
+    testLogging {
+        events 'passed', 'skipped', 'failed'
+    }
+
+
+    if (project.plugins.findPlugin('jacoco')) {
+        finalizedBy jacocoTestReport
+    }
+}
